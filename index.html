@@ -3,19 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>變更梅花湖風景特定區計畫（公共設施用地專案通盤檢討）</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>變更梅花湖風景特定區計畫（公共設施用地專案通盤檢討）完整計畫書</title>
     <style>
-        :root {
-            --primary-color: #2c5aa0;
-            --secondary-color: #4a90e2;
-            --accent-color: #28a745;
-            --warning-color: #ffc107;
-            --danger-color: #dc3545;
-            --light-bg: #f8f9fa;
-            --dark-bg: #343a40;
-            --text-color: #333;
-            --border-color: #dee2e6;
+        @page {
+            size: A4;
+            margin: 2cm;
         }
 
         * {
@@ -27,142 +19,117 @@
         body {
             font-family: 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-bg);
-        }
-
-        /* 導航欄 */
-        .navbar {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .nav-logo {
-            color: white;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-menu li {
-            margin-left: 30px;
-        }
-
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            padding: 20px 0;
-            display: block;
-            transition: all 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-            color: #ffd700;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
+            color: #333;
             background: white;
-            margin: 3px 0;
-            transition: 0.3s;
+            font-size: 12pt;
         }
 
-        /* 主要內容 */
-        .main-content {
-            margin-top: 80px;
-            min-height: calc(100vh - 80px);
+        .page-break {
+            page-break-before: always;
         }
 
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 80px 20px;
+        .no-break {
+            page-break-inside: avoid;
+        }
+
+        /* 封面 */
+        .cover {
             text-align: center;
+            padding: 100px 50px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 3px solid #2c5aa0;
         }
 
-        .hero h1 {
+        .cover h1 {
             font-size: 2.5em;
-            margin-bottom: 20px;
+            color: #2c5aa0;
+            margin-bottom: 30px;
             font-weight: bold;
         }
 
-        .hero .subtitle {
+        .cover .subtitle {
+            font-size: 1.5em;
+            color: #4a90e2;
+            margin-bottom: 50px;
+        }
+
+        .cover .version-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px solid #2c5aa0;
+        }
+
+        .cover .authority {
+            margin-top: 50px;
             font-size: 1.2em;
+            color: #666;
+        }
+
+        /* 目錄 */
+        .toc {
+            padding: 50px;
+        }
+
+        .toc h2 {
+            color: #2c5aa0;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 20px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .toc a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .toc a:hover {
+            color: #2c5aa0;
+        }
+
+        /* 章節樣式 */
+        .chapter {
+            padding: 50px;
+            page-break-before: always;
+        }
+
+        .chapter h2 {
+            color: #2c5aa0;
+            font-size: 2em;
             margin-bottom: 30px;
-            opacity: 0.9;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 15px;
         }
 
-        .hero .version-info {
-            background: rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 10px;
-            display: inline-block;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .content-section {
-            background: white;
-            margin: 40px 0;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .section-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 30px;
-        }
-
-        .section-header h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-
-        .section-content {
-            padding: 40px;
-        }
-
-        .section-content h3 {
-            color: var(--primary-color);
-            font-size: 1.4em;
+        .chapter h3 {
+            color: #4a90e2;
+            font-size: 1.5em;
             margin: 30px 0 15px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--secondary-color);
+            padding-left: 20px;
+            border-left: 5px solid #4a90e2;
         }
 
-        .section-content h4 {
-            color: var(--secondary-color);
+        .chapter h4 {
+            color: #666;
             font-size: 1.2em;
             margin: 20px 0 10px 0;
         }
@@ -172,70 +139,42 @@
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
+            font-size: 11pt;
         }
 
         .data-table th {
-            background: var(--primary-color);
+            background: #2c5aa0;
             color: white;
-            padding: 15px;
+            padding: 12px;
             text-align: left;
             font-weight: bold;
+            border: 1px solid #ddd;
         }
 
         .data-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid var(--border-color);
+            padding: 10px 12px;
+            border: 1px solid #ddd;
         }
 
         .data-table tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        .data-table tr:hover {
-            background-color: #e3f2fd;
-        }
-
-        /* 卡片樣式 */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 5px solid var(--accent-color);
-        }
-
-        .card h4 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.2em;
+            background-color: #f9f9f9;
         }
 
         /* 高亮框 */
         .highlight-box {
-            background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
-            border-left: 5px solid var(--secondary-color);
+            background: #f8f9fa;
+            border-left: 5px solid #4a90e2;
             padding: 20px;
             margin: 20px 0;
-            border-radius: 8px;
+            border-radius: 5px;
         }
 
         .warning-box {
-            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
-            border-left: 5px solid var(--warning-color);
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
             padding: 20px;
             margin: 20px 0;
-            border-radius: 8px;
+            border-radius: 5px;
         }
 
         /* 列表樣式 */
@@ -248,585 +187,443 @@
             margin: 8px 0;
         }
 
-        /* 統計數字 */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
+        /* 頁碼 */
+        .page-number {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 10pt;
+            color: #666;
         }
 
-        .stat-card {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
-        /* 頁腳 */
-        .footer {
-            background: var(--dark-bg);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* 響應式設計 */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--primary-color);
-                flex-direction: column;
+        /* 列印樣式 */
+        @media print {
+            body {
+                font-size: 11pt;
             }
-
-            .nav-menu.active {
-                display: flex;
+            
+            .chapter {
+                padding: 30px;
             }
-
-            .nav-menu li {
-                margin: 0;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-
-            .nav-menu a {
-                padding: 15px 20px;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2em;
-            }
-
-            .section-content {
-                padding: 20px;
-            }
-
+            
             .data-table {
-                font-size: 0.9em;
+                font-size: 10pt;
             }
-
+            
             .data-table th,
             .data-table td {
                 padding: 8px 10px;
             }
-
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* 動畫效果 */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.6s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* 回到頂部按鈕 */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--primary-color);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-        }
-
-        .back-to-top:hover {
-            background: var(--secondary-color);
-            transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
-    <!-- 導航欄 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <i class="fas fa-mountain"></i> 梅花湖計畫
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#overview">計畫概覽</a></li>
-                <li><a href="#changes">變更內容</a></li>
-                <li><a href="#regulations">管制要點</a></li>
-                <li><a href="#impact">影響分析</a></li>
-                <li><a href="#documents">相關文件</a></li>
+    <!-- 封面 -->
+    <div class="cover">
+        <h1>變更梅花湖風景特定區計畫</h1>
+        <div class="subtitle">公共設施用地專案通盤檢討</div>
+        
+        <div class="version-info">
+            <strong>校訂統整版（依提供之官方計畫書與會議紀錄 OCR 重編）</strong><br>
+            版本：2025-08-19（校訂）<br>
+            計畫書標示：中華民國111年4月<br>
+            適用對象：政務／審議簡報／法律與技術審查使用
+        </div>
+        
+        <div class="authority">
+            <p>主辦機關：宜蘭縣政府</p>
+            <p>審議機關：內政部都市計畫委員會</p>
+            <p>實施日期：中華民國111年4月</p>
+        </div>
+    </div>
+
+    <!-- 目錄 -->
+    <div class="toc page-break">
+        <h2>目錄</h2>
+        <ul>
+            <li><a href="#chapter1">第一章　緒論（計畫緣起與法源）</a></li>
+            <li><a href="#chapter2">第二章　現行計畫概要（範圍、年期、人口、用地與交通）</a></li>
+            <li><a href="#chapter3">第三章　檢討分析與變更原則（含第17條第2項但書之適用）</a></li>
+            <li><a href="#chapter4">第四章　檢討變更內容（位置、權屬、變更明細）</a></li>
+            <li><a href="#chapter5">第五章　檢討後計畫（範圍、面積、用地配置調整）</a></li>
+            <li><a href="#chapter6">第六章　土地使用分區管制要點（建蔽、容積、退縮、停車等）</a></li>
+            <li><a href="#chapter7">第七章　實施進度與經費（摘要）</a></li>
+            <li><a href="#appendix">附錄　審議紀錄摘錄與重要表件（索引）</a></li>
+            <li><a href="#notes">附註　校訂說明與疑義標記</a></li>
+        </ul>
+    </div>
+
+    <!-- 第一章　緒論 -->
+    <div id="chapter1" class="chapter">
+        <h2>第一章　緒論</h2>
+        
+        <h3>一、計畫緣起</h3>
+        <p>我國過往多處都市計畫公共設施保留地（如公園、綠地、停車場等）長期未能取得或開闢，形成「紙上公設」問題，影響民眾財產權及公共資源配置效率。內政部遂頒布「都市計畫公共設施保留地檢討變更作業原則」，並補助地方政府辦理專案通盤檢討，以檢討不具使用必要性之公設保留地，調整為更適切之分區，以回應實際使用需求、減輕公帑負擔並維護環境。</p>
+        
+        <p>本案即屬宜蘭縣政府針對「梅花湖風景特定區」辦理之<strong>公共設施用地專案通盤檢討</strong>，經宜蘭縣都市計畫委員會及內政部都市計畫委員會審議通過。</p>
+
+        <h3>二、法源依據</h3>
+        <ul>
+            <li>《都市計畫法》第26條</li>
+            <li>《都市計畫定期通盤檢討實施辦法》第14條第4款、第17條第2項但書（情形特殊）</li>
+            <li>內政部所頒「都市計畫公共設施保留地檢討變更作業原則」</li>
+        </ul>
+
+        <h3>三、審議程序與紀要（摘錄）</h3>
+        <div class="highlight-box">
+            <ul>
+                <li>宜蘭縣都市計畫委員會審議通過（附件一載有第211次會議紀錄摘錄）</li>
+                <li>內政部都市計畫委員會<strong>第992次會議</strong>（中華民國110年6月29日）審議通過，並對文字修訂及原則條列提出指示（詳附件二摘錄）</li>
+                <li>計畫書版本標示：<strong>中華民國111年4月</strong></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
-    </nav>
-
-    <!-- 主要內容 -->
-    <div class="main-content">
-        <!-- 英雄區塊 -->
-        <section class="hero">
-            <div class="container">
-                <h1>變更梅花湖風景特定區計畫</h1>
-                <div class="subtitle">公共設施用地專案通盤檢討</div>
-                <div class="version-info">
-                    <i class="fas fa-calendar-alt"></i> 版本：2025-08-19（校訂）
-                    <br>
-                    <i class="fas fa-file-alt"></i> 計畫書標示：中華民國111年4月
-                </div>
-            </div>
-        </section>
-
-        <!-- 計畫概覽 -->
-        <section id="overview" class="content-section fade-in">
-            <div class="section-header">
-                <h2><i class="fas fa-info-circle"></i> 計畫概覽</h2>
-            </div>
-            <div class="section-content">
-                <h3>計畫緣起</h3>
-                <p>我國過往多處都市計畫公共設施保留地（如公園、綠地、停車場等）長期未能取得或開闢，形成「紙上公設」問題，影響民眾財產權及公共資源配置效率。內政部遂頒布「都市計畫公共設施保留地檢討變更作業原則」，並補助地方政府辦理專案通盤檢討。</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">220.47</div>
-                        <div class="stat-label">計畫總面積（公頃）</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">36.051</div>
-                        <div class="stat-label">公共設施用地（公頃）</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">50.6萬</div>
-                        <div class="stat-label">年遊客量（人次）</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">111年</div>
-                        <div class="stat-label">計畫實施年度</div>
-                    </div>
-                </div>
-
-                <h3>法源依據</h3>
-                <ul>
-                    <li>《都市計畫法》第26條</li>
-                    <li>《都市計畫定期通盤檢討實施辦法》第14條第4款、第17條第2項但書</li>
-                    <li>內政部所頒「都市計畫公共設施保留地檢討變更作業原則」</li>
-                </ul>
-
-                <h3>審議程序</h3>
-                <div class="highlight-box">
-                    <ul>
-                        <li><strong>宜蘭縣都市計畫委員會</strong>：第211次會議審議通過</li>
-                        <li><strong>內政部都市計畫委員會</strong>：第992次會議（民國110年6月29日）審議通過</li>
-                        <li><strong>實施日期</strong>：中華民國111年4月</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 變更內容 -->
-        <section id="changes" class="content-section fade-in">
-            <div class="section-header">
-                <h2><i class="fas fa-exchange-alt"></i> 變更內容</h2>
-            </div>
-            <div class="section-content">
-                <h3>主要變更項目</h3>
-                
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>案別</th>
-                            <th>原分區</th>
-                            <th>新分區</th>
-                            <th>涉及地號</th>
-                            <th>變更面積（公頃）</th>
-                            <th>變更理由</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>變更一（綠-1）</strong></td>
-                            <td>綠地</td>
-                            <td>農業區</td>
-                            <td>大埤段65-1、60-3（部分）</td>
-                            <td>-0.05（綠地）／+0.05（農業）</td>
-                            <td>現況為耕地、未開闢；依專案原則調回農用</td>
-                        </tr>
-                        <tr>
-                            <td><strong>變更二（停-1）</strong></td>
-                            <td>停車場</td>
-                            <td>部分改為保護區</td>
-                            <td>大埤段1218、1219、1221、1228、1229</td>
-                            <td>-0.019（停車場）／+0.019（保護）</td>
-                            <td>1218地形陡峭、林地，不具停車可行性</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>土地使用計畫變更後統計</h3>
-                <div class="card-grid">
-                    <div class="card">
-                        <h4><i class="fas fa-tree"></i> 保護區</h4>
-                        <p><strong>131.819 公頃</strong>（較前 +0.019）</p>
-                        <p>以涵養水土、保護特殊地形地勢為主</p>
-                    </div>
-                    <div class="card">
-                        <h4><i class="fas fa-seedling"></i> 農業區</h4>
-                        <p><strong>40.41 公頃</strong>（較前 +0.05）</p>
-                        <p>以農業生產為主，可依法申請農舍</p>
-                    </div>
-                    <div class="card">
-                        <h4><i class="fas fa-home"></i> 住宅區</h4>
-                        <p><strong>1.31 公頃</strong>（不變）</p>
-                        <p>建蔽率≤60%、容積率≤120%</p>
-                    </div>
-                    <div class="card">
-                        <h4><i class="fas fa-hotel"></i> 遊憩服務設施區</h4>
-                        <p><strong>6.25 公頃</strong>（不變）</p>
-                        <p>第一種及第二種遊憩服務設施區</p>
-                    </div>
-                </div>
-
-                <h3>公共設施用地調整</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>用地類型</th>
-                            <th>變更前（公頃）</th>
-                            <th>變更後（公頃）</th>
-                            <th>增減</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>公園用地</td>
-                            <td>22.27</td>
-                            <td>22.27</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>停車場用地</td>
-                            <td>0.56</td>
-                            <td>0.54</td>
-                            <td>-0.019</td>
-                        </tr>
-                        <tr>
-                            <td>兒童遊樂場</td>
-                            <td>1.92</td>
-                            <td>1.92</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>綠地</td>
-                            <td>0.08</td>
-                            <td>0.03</td>
-                            <td>-0.05</td>
-                        </tr>
-                        <tr>
-                            <td><strong>合計</strong></td>
-                            <td><strong>36.12</strong></td>
-                            <td><strong>36.051</strong></td>
-                            <td><strong>-0.069</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- 管制要點 -->
-        <section id="regulations" class="content-section fade-in">
-            <div class="section-header">
-                <h2><i class="fas fa-gavel"></i> 土地使用分區管制要點</h2>
-            </div>
-            <div class="section-content">
-                <h3>通則規定</h3>
-                <div class="highlight-box">
-                    <ul>
-                        <li><strong>綠化要求</strong>：各基地法定空地之綠覆率不得小於50%</li>
-                        <li><strong>植栽規定</strong>：每50平方公尺植樹1株（不足5株者以5株計）</li>
-                        <li><strong>維護責任</strong>：完工後由所有權人或經營人維護，不得任意砍伐或移植</li>
-                    </ul>
-                </div>
-
-                <h3>各分區建築管制</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>分區類型</th>
-                            <th>建蔽率</th>
-                            <th>容積率</th>
-                            <th>高度限制</th>
-                            <th>特殊規定</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>第一種遊憩服務設施區</td>
-                            <td>≤40%</td>
-                            <td>≤80%</td>
-                            <td>≤3層或10.5公尺</td>
-                            <td>臨公設退縮10公尺</td>
-                        </tr>
-                        <tr>
-                            <td>第二種遊憩服務設施區</td>
-                            <td>≤30%</td>
-                            <td>≤60%</td>
-                            <td>≤3層或10.5公尺</td>
-                            <td>準用第一種規定</td>
-                        </tr>
-                        <tr>
-                            <td>住宅區</td>
-                            <td>≤60%</td>
-                            <td>≤120%</td>
-                            <td>≤3層或10.5公尺</td>
-                            <td>須完成計畫道路</td>
-                        </tr>
-                        <tr>
-                            <td>農業區</td>
-                            <td>≤40%</td>
-                            <td>≤100%</td>
-                            <td>≤3層或10.5公尺</td>
-                            <td>農舍單層≤165㎡</td>
-                        </tr>
-                        <tr>
-                            <td>保護區</td>
-                            <td>≤40%</td>
-                            <td>≤100%</td>
-                            <td>≤1層或7公尺</td>
-                            <td>坡度＞30%不得建築</td>
-                        </tr>
-                        <tr>
-                            <td>第一種宗教專用區</td>
-                            <td>≤50%</td>
-                            <td>≤100%</td>
-                            <td>無限制</td>
-                            <td>不得設置納骨設施</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>特別條款</h3>
-                <div class="warning-box">
-                    <h4><i class="fas fa-exclamation-triangle"></i> 重要提醒</h4>
-                    <ul>
-                        <li><strong>綠地改農業區</strong>：申請農舍時須退縮至原綠地劃設寬度，以維持綠帶功能</li>
-                        <li><strong>屋頂形式</strong>：平屋頂覆蓋面積不得逾建築面積二分之一，其餘屋頂斜率不得小於25%</li>
-                        <li><strong>停車設置</strong>：遊憩設施每100㎡設置1部小客車位，每10部小客車位增設1部大客車位</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 影響分析 -->
-        <section id="impact" class="content-section fade-in">
-            <div class="section-header">
-                <h2><i class="fas fa-chart-line"></i> 影響分析</h2>
-            </div>
-            <div class="section-content">
-                <h3>對不同角色的影響</h3>
-                <div class="card-grid">
-                    <div class="card">
-                        <h4><i class="fas fa-user"></i> 地主</h4>
-                        <ul>
-                            <li>查看地號是否被解編或變更</li>
-                            <li>評估申請農舍或保留自然環境之價值</li>
-                            <li>了解新的建築限制與機會</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4><i class="fas fa-chart-bar"></i> 投資者</h4>
-                        <ul>
-                            <li>留意農地價值提升潛力</li>
-                            <li>分析保護區不可建築風險</li>
-                            <li>評估資產配置策略</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4><i class="fas fa-building"></i> 開發業者</h4>
-                        <ul>
-                            <li>調查建築可行性</li>
-                            <li>包含出入口審查、屋頂設計</li>
-                            <li>注意坡度限制、公共設施保留</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4><i class="fas fa-users"></i> 居民</h4>
-                        <ul>
-                            <li>了解家門口綠地、停車場變化</li>
-                            <li>參與地方討論與決策</li>
-                            <li>關注環境保護與發展平衡</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h3>計畫效益</h3>
-                <div class="highlight-box">
-                    <ul>
-                        <li><strong>減少浪費</strong>：減少「紙上規劃但永遠用不到」的公共設施用地浪費</li>
-                        <li><strong>提升效率</strong>：釋放多餘用地供實際使用（如農業利用）</li>
-                        <li><strong>環境保護</strong>：強化對環境敏感地區（陡坡林地等）的保護</li>
-                        <li><strong>符合需求</strong>：讓都市計畫「接地氣」，更符合區域現況與未來需求</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 相關文件 -->
-        <section id="documents" class="content-section fade-in">
-            <div class="section-header">
-                <h2><i class="fas fa-file-alt"></i> 相關文件</h2>
-            </div>
-            <div class="section-content">
-                <h3>審議紀錄</h3>
-                <ul>
-                    <li><strong>附件一</strong>：宜蘭縣都市計畫委員會第211次會議紀錄（摘錄）</li>
-                    <li><strong>附件二</strong>：內政部都市計畫委員會第992次會議紀錄（摘錄）</li>
-                </ul>
-
-                <h3>圖目錄</h3>
-                <ul>
-                    <li>圖一　計畫範圍位置圖</li>
-                    <li>圖二　土地使用分區圖</li>
-                    <li>圖六　綠-1（土地使用現況照片圖）</li>
-                    <li>圖八　停-1（土地使用現況照片圖）</li>
-                </ul>
-
-                <div class="warning-box">
-                    <h4><i class="fas fa-info-circle"></i> 校訂說明</h4>
-                    <p>本文件係依官方計畫書與審議紀錄OCR文字重編，為便於法律與技術審查之可讀版。原OCR中之明顯錯字與排版錯亂，已按專業用語與計畫上下文校正。對於無法百分百確定之細節，已以「概述／以正式圖說為準」方式註明。</p>
-                    <p>若需核對法定公告版本或出具對外正式本，建議以本文件為索引，逐條對照核定之「計畫書及書圖」，並由承辦單位或律師完成最終版本簽認。</p>
-                </div>
-            </div>
-        </section>
     </div>
 
-    <!-- 回到頂部按鈕 -->
-    <div class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
+    <!-- 第二章　現行計畫概要 -->
+    <div id="chapter2" class="chapter">
+        <h2>第二章　現行計畫概要</h2>
+        
+        <h3>一、計畫沿革</h3>
+        <p>梅花湖風景特定區自民國73年6月9日公告實施以來，歷經3次主要計畫通盤檢討及1次個案變更（詳歷次變更表，略）。</p>
+
+        <h3>二、計畫範圍與面積</h3>
+        <ul>
+            <li><strong>行政區屬</strong>：宜蘭縣冬山鄉</li>
+            <li><strong>區位</strong>：羅東鎮南側約6公里</li>
+            <li><strong>範圍界線</strong>（概述）：東以湖面東側約250公尺之山脊線為界；南至三清宮以南約450公尺之山稜線附近；西以環湖道路西側山稜線為界；北至鄉道（疑似宜30或39號）與產業道路一帶</li>
+            <li><strong>計畫總面積：220.47 公頃</strong></li>
+        </ul>
+        
+        <div class="warning-box">
+            <p><strong>註</strong>：個別界線描述因 OCR 疑義，仍以正式公告圖說為準。</p>
+        </div>
+
+        <h3>三、計畫年期與遊客人口（現行）</h3>
+        <ul>
+            <li><strong>目標年期</strong>：民國104年（現行基準）</li>
+            <li><strong>年遊客量</strong>：約 50.6 萬人次</li>
+            <li><strong>日均遊客數</strong>：約 3,793 人次</li>
+            <li><strong>尖峰日可供住宿人次</strong>：約 1,506 人次</li>
+        </ul>
+
+        <h3>四、土地使用計畫（現況）</h3>
+        <ul>
+            <li><strong>主要分區</strong>：保護區、農業區、住宅區、第一及第二種遊憩服務設施區、第一及第二種宗教專用區、兒童教養專用區等</li>
+            <li><strong>公共設施用地</strong>：公園、停車場、兒童遊樂場、綠地、溝渠、污水處理廠、道路</li>
+            <li><strong>公共設施用地合計：36.12 公頃（變更前）</strong></li>
+        </ul>
+
+        <h3>五、交通系統（概要）</h3>
+        <ul>
+            <li><strong>聯外道路</strong>：二號計畫道路連接一號與九號計畫道路，作為連接冬山鄉市區、羅東都會地區之主要聯外幹道，<strong>計畫寬度10公尺</strong>（依圖說，實際以法定版本為準）</li>
+            <li><strong>區內道路</strong>：主要／次要／出入道路系統，計畫寬度分別約20、15、12、10、9、7公尺不等；<strong>環湖道路規劃寬度9公尺</strong></li>
+        </ul>
     </div>
 
-    <!-- 頁腳 -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p><i class="fas fa-file-alt"></i> 資料來源：官方計畫書及政府公開資料</p>
-            <p><i class="fas fa-calendar-alt"></i> 最後更新：民國111年4月</p>
-            <p><i class="fas fa-map-marker-alt"></i> 適用範圍：宜蘭縣冬山鄉梅花湖風景特定區</p>
+    <!-- 第三章　檢討分析與變更原則 -->
+    <div id="chapter3" class="chapter">
+        <h2>第三章　檢討分析與變更原則</h2>
+        
+        <h3>一、都市計畫公共設施保留地檢討變更作業原則（摘要）</h3>
+        <p>依內政部原則與宜蘭縣自訂檢討原則，對各類公設保留地（機關、學校、市場、停車場、體育場、河道、道路等）按是否有具體事業計畫、財務可行性、實際使用需求、服務範圍與替代性進行檢討。不具需求或無法開闢者，得檢討為其他適當分區（如農業區或保護區），或改以整體開發（如市地重劃）取得所需公設。</p>
+
+        <h3>二、《定檢辦法》第17條第2項但書「情形特殊」之適用</h3>
+        <ul>
+            <li>但書所列「情形特殊」包含風景特定區、水源特定區等，其計畫目的具公共開放空間與設施功能，性質與一般市鎮計畫不同</li>
+            <li>本案屬風景特定區，區內公園、廣場、體育活動空間等公共開放空間之功能，<strong>符合但書第二條第一款</strong>之審議原則，得不受「通盤檢討後5項公設面積不得低於檢討前」之限制，惟仍應具體提升實質取得與使用效益</li>
+        </ul>
+
+        <h3>三、宜蘭縣公共設施用地專案通盤檢討—本案適用重點</h3>
+        <ul>
+            <li>未開闢或不具可行性的公設用地：檢討調整為農業區或保護區（依現況使用、地形坡度、環境敏感度）</li>
+            <li>以<strong>恢復或變更為非都市發展用地（農業區或保護區）</strong>為主要處理方式者，應說明維持景觀綠帶與環境保護之具體措施（如退縮維持綠帶）</li>
+            <li>其餘未取得之公設用地，得併入<strong>後續「第三次通盤檢討」</strong>一併檢討與推動實質取得</li>
+        </ul>
+    </div>
+
+    <!-- 第四章　檢討變更內容 -->
+    <div id="chapter4" class="chapter">
+        <h2>第四章　檢討變更內容</h2>
+        
+        <h3>一、公共設施用地取得與使用現況（節錄）</h3>
+        <ul>
+            <li><strong>計畫總面積</strong>：220.47 公頃</li>
+            <li><strong>公共設施用地</strong>：36.12 公頃（公園22.27、停車場0.56、兒童遊樂場1.92、綠地0.08、溝渠0.33、污水處理廠0.10、道路10.86）</li>
+            <li><strong>開闢狀況</strong>：部分已開闢（如主要公園、部分停車場），部分未開闢（如綠地）</li>
+        </ul>
+
+        <h3>二、檢討位置與土地權屬（本次涉及2處）</h3>
+        
+        <h4>1. 綠地（綠-1）</h4>
+        <ul>
+            <li><strong>位置／地號</strong>：大埤段 <strong>65-1</strong> 及<strong>部分60-3</strong></li>
+            <li><strong>面積</strong>：約 <strong>0.05 公頃</strong>（綠地變更減少量）</li>
+            <li><strong>權屬</strong>：私有；與東側農業區地號同一所有權人（依OCR記載）</li>
+            <li><strong>現況</strong>：耕作使用，未開闢綠地</li>
+        </ul>
+
+        <h4>2. 停車場（停-1）</h4>
+        <ul>
+            <li><strong>位置／地號</strong>：大埤段 <strong>1218、1219、1221、1228、1229</strong></li>
+            <li><strong>面積</strong>：本次停車場用地減少 <strong>0.019 公頃</strong></li>
+            <li><strong>權屬摘要</strong>：
+                <ul>
+                    <li>三清宮：1219、1221、1228（現況供停車使用）</li>
+                    <li>梅花湖健行會：1229（現況停車使用）</li>
+                    <li>私有：<strong>1218</strong>（現況坡地林地）</li>
+                </ul>
+            </li>
+            <li><strong>現況</strong>：除1218外，其餘多已作停車使用，提供遊客及香客停車</li>
+        </ul>
+
+        <h3>三、變更明細（表）</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>案別</th>
+                    <th>原分區</th>
+                    <th>新分區</th>
+                    <th>涉及地號</th>
+                    <th>變更面積（公頃）</th>
+                    <th>變更理由與使用指引</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>變更一（綠-1）</td>
+                    <td>綠地</td>
+                    <td><strong>農業區</strong></td>
+                    <td>大埤段65-1、60-3（部分）</td>
+                    <td>-0.05（綠地）／+0.05（農業）</td>
+                    <td>現況為耕地、未開闢；依專案原則調回農用。<strong>日後如申請農舍，須「退縮至原綠地劃設寬度」</strong>，以維持綠帶功能。</td>
+                </tr>
+                <tr>
+                    <td>變更二（停-1）</td>
+                    <td>停車場</td>
+                    <td><strong>部分改為保護區</strong>；其餘維持停車場</td>
+                    <td>大埤段1218、1219、1221、1228、1229</td>
+                    <td>-0.019（停車場）／+0.019（保護）</td>
+                    <td>1218地形陡峭、林地，不具停車可行性，改列保護；其餘地號保留停車功能。</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="warning-box">
+            <p><strong>註</strong>：圖示與航照照片（參照圖六、圖八等）略，仍以正式核定圖說為準。</p>
         </div>
-    </footer>
+    </div>
+
+    <!-- 第五章　檢討後計畫 -->
+    <div id="chapter5" class="chapter">
+        <h2>第五章　檢討後計畫</h2>
+        
+        <h3>一、計畫範圍與面積（維持）</h3>
+        <ul>
+            <li><strong>計畫範圍</strong>：同前（詳第二章）</li>
+            <li><strong>計畫總面積：220.47 公頃（不變）</strong></li>
+        </ul>
+
+        <h3>二、土地使用計畫（變更後）</h3>
+        
+        <h4>分區面積摘要（能明確者列示）</h4>
+        <ul>
+            <li><strong>保護區</strong>：<strong>131.819 公頃</strong>（較前 <strong>+0.019</strong>）</li>
+            <li><strong>農業區</strong>：<strong>40.41 公頃</strong>（較前 <strong>+0.05</strong>）</li>
+            <li><strong>住宅區</strong>：<strong>1.31 公頃</strong>（不變）</li>
+            <li><strong>第一種遊憩服務設施區</strong>：<strong>1.61 公頃</strong>（不變）</li>
+            <li><strong>第二種遊憩服務設施區</strong>：<strong>4.64 公頃</strong>（不變）</li>
+            <li><strong>第一種宗教專用區</strong>：<strong>4.01 公頃</strong>（不變）</li>
+            <li><strong>第二種宗教專用區</strong>：<strong>0.02 公頃</strong>（不變）</li>
+            <li><strong>兒童教養專用區</strong>：<strong>0.60 公頃</strong>（不變）</li>
+        </ul>
+
+        <h4>公共設施用地合計</h4>
+        <p><strong>36.051 公頃</strong>（較前 <strong>-0.069</strong>）。其中：</p>
+        <ul>
+            <li><strong>公園用地</strong>：<strong>22.27 公頃</strong>（不變）</li>
+            <li><strong>停車場用地</strong>：<strong>0.54 公頃</strong>（較前 <strong>-0.019</strong>）</li>
+            <li><strong>兒童遊樂場</strong>：<strong>1.92 公頃</strong>（不變）</li>
+            <li><strong>綠地</strong>：<strong>0.03 公頃</strong>（較前 <strong>-0.05</strong>）</li>
+            <li><strong>溝渠用地</strong>：<strong>0.33 公頃</strong>（不變）</li>
+            <li><strong>污水處理廠</strong>：<strong>0.10 公頃</strong>（不變）</li>
+            <li><strong>道路用地</strong>：<strong>10.86 公頃</strong>（不變）</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>其餘未取得公設用地，縣府將於<strong>「梅花湖風景特定區計畫（第三次通盤檢討）」</strong>中一併檢討處理（計畫書明載）。</p>
+        </div>
+    </div>
+
+    <!-- 第六章　土地使用分區管制要點 -->
+    <div id="chapter6" class="chapter">
+        <h2>第六章　土地使用分區管制要點</h2>
+        
+        <div class="warning-box">
+            <p><strong>註</strong>：本章依計畫書「土地使用分區管制要點」條文整理，僅調整排版與用語。</p>
+        </div>
+
+        <h3>通則</h3>
+        <ol>
+            <li>本要點依《都市計畫法》第32條及臺灣省施行細則第35條訂定。</li>
+            <li>本區劃設之分區與公設用地如下：
+                <ul>
+                    <li>第一種遊憩服務設施區、第二種遊憩服務設施區、住宅區、農業區、保護區、第一種宗教專用區、第二種宗教專用區、兒童教養專用區、公園用地、停車場用地、兒童遊樂場用地、綠地、溝渠用地、道路用地、污水處理廠用地。</li>
+                </ul>
+            </li>
+            <li><strong>綠化與植栽通案要求</strong>：
+                <ul>
+                    <li>各基地<strong>法定空地之綠覆率不得小於50%</strong></li>
+                    <li><strong>每50平方公尺植樹1株</strong>（不足5株者以5株計）。退縮部分應綠化。植栽配置應於建築設計階段提出，建造執照審查時檢附，完工後由所有權人或經營人維護，不得任意砍伐或移植。</li>
+                    <li>觀光主管機關得列管綠化狀況並定期稽查，必要時得要求補植。</li>
+                </ul>
+            </li>
+            <li><strong>公共設施用地之使用</strong>：除兒童遊樂場用地外，<strong>不適用</strong>「都市計畫公共設施用地多目標使用方案」。</li>
+        </ol>
+
+        <h3>各分區管制</h3>
+        
+        <h4>（一）第一種遊憩服務設施區</h4>
+        <ol>
+            <li>基地面寬不得小於5公尺；單一基地面積不得小於100平方公尺。</li>
+            <li><strong>建蔽率≤40%、容積率≤80%、高度≤3層或10.5公尺。</strong></li>
+            <li>基地臨接<strong>公共設施用地須退縮10公尺</strong>，其退縮部分得計入法定空地。</li>
+            <li>停車設置：以實際開發範圍之<strong>樓地板面積每100㎡設置1部小客車位</strong>，且<strong>每10部小客車位增設1部大客車位</strong>；小客車位得以<strong>3部折算1部大客車位</strong>。</li>
+            <li>容許用途（舉例）：旅館、零售商店、餐廳、遊客／會議中心、茶藝館、健身房、游泳池、球場等旅遊服務設施。</li>
+            <li>屋頂形式：平屋頂覆蓋面積不得逾建築面積二分之一；其餘屋頂部分<strong>斜率不得小於25%</strong>。</li>
+        </ol>
+
+        <h4>（二）第二種遊憩服務設施區</h4>
+        <ol>
+            <li><strong>建蔽率≤30%、容積率≤60%、高度≤3層或10.5公尺。</strong></li>
+            <li>停車比率、退縮與屋頂規範，準用第一種遊憩服務設施區之規定。</li>
+        </ol>
+
+        <h4>（三）住宅區</h4>
+        <ol>
+            <li><strong>建蔽率≤60%、容積率≤120%、高度≤3層或10.5公尺。</strong></li>
+            <li>申請建築時，應先完成所屬基地臨接之計畫道路（用地之取得與開闢）。</li>
+            <li>屋頂形式：平屋頂覆蓋面積不得逾建築面積二分之一；其餘屋頂部分<strong>斜率不得小於25%</strong>。</li>
+        </ol>
+
+        <h4>（四）農業區</h4>
+        <ol>
+            <li>以農業生產為主，禁止設置土石方堆置場、廢棄物資源回收貯存場、汽車運輸業停車場（站）、客／貨運站及其附屬設施、加油（氣）站等。</li>
+            <li>一般建築（非農舍）：<strong>建蔽率≤40%、容積率≤100%</strong>。</li>
+            <li>農舍：<strong>最高3層或10.5公尺</strong>；<strong>單層最大基底面積≤165㎡</strong>；其餘依農業主管法規辦理。</li>
+            <li>屋頂形式：平屋頂覆蓋面積不得逾二分之一；其餘屋頂<strong>斜率≥25%</strong>。</li>
+            <li><strong>特別條款（本案新增）</strong>：綠地改為農業區之基地，<strong>申請農舍時須退縮至原綠地劃設寬度</strong>，以維持既有綠帶。</li>
+        </ol>
+
+        <h4>（五）保護區</h4>
+        <ol>
+            <li>以涵養水土、保護特殊地形地勢為主；原則上不得開發。</li>
+            <li><strong>自然坡度＞30%之土地不得作為建築使用，並不得計入法定空地。</strong></li>
+            <li>建築物高度原則<strong>不得超過1層或7公尺</strong>。</li>
+            <li>申請農舍者：建築物<strong>單層最大基底≤165㎡</strong>，且<strong>不得超過原有（合法）樓地板面積</strong>。</li>
+            <li>其他經准用為建築使用者：<strong>建蔽率≤40%、容積率≤100%</strong>；屋頂斜率同上。</li>
+        </ol>
+
+        <h4>（六）第一種宗教專用區</h4>
+        <ol>
+            <li>以宗教建築及其附屬設施為主；<strong>不得設置納骨設施</strong>。</li>
+            <li><strong>建蔽率≤50%、容積率≤100%。</strong></li>
+            <li>坡度＞30%之土地不得作建築使用，並不得計入法定空地。</li>
+            <li>須設置污水與雨水分流系統；加強水土保持與景觀綠化。</li>
+        </ol>
+
+        <h4>（七）第二種宗教專用區</h4>
+        <ol>
+            <li>以宗教活動及其附屬設施為主；<strong>不得設置納骨設施</strong>。</li>
+            <li><strong>建蔽率≤50%、容積率≤60%、高度≤2層或7公尺。</strong></li>
+        </ol>
+
+        <h4>（八）兒童教養專用區</h4>
+        <ol>
+            <li>以教養、照護、復健等設施為主。</li>
+            <li><strong>建蔽率≤50%、容積率≤100%。</strong></li>
+        </ol>
+
+        <h4>（九）兒童遊樂場用地</h4>
+        <ol>
+            <li>以兒童育樂及辦理冬／夏令營等相關活動為主。</li>
+            <li><strong>建蔽率≤15%、容積率≤30%</strong>；<strong>基地面積≥0.5公頃</strong>。</li>
+            <li>由觀光主管機關擬具管理與使用方案辦理。</li>
+        </ol>
+
+        <h4>（十）污水處理廠用地</h4>
+        <ol>
+            <li>建蔽與容積由縣府主關機關依公共安全與公害防制等公益事項，按實際設置需求擬定。</li>
+            <li><strong>臨道路用地退縮5公尺</strong>後始得建築。</li>
+            <li>場區採<strong>開放式參觀動線</strong>並以<strong>綠化遮蔽</strong>，發揮環境教育功能。</li>
+        </ol>
+
+        <h4>（十一）其他公設用地</h4>
+        <p>公園、停車場、綠地、溝渠、道路等依原計畫公設使用管制規定辦理；其細部設計應符合環境、生態與安全之專業基準。</p>
+    </div>
+
+    <!-- 第七章　實施進度與經費 -->
+    <div id="chapter7" class="chapter">
+        <h2>第七章　實施進度與經費</h2>
+        
+        <p>本次僅就綠地（綠-1）與停車場（停-1）辦理變更；其餘未取得公設用地，規劃於<strong>第三次通盤檢討</strong>中整體檢討，包含：用地取得方式、預估經費與期程（計畫書表九，略）。</p>
+    </div>
+
+    <!-- 附錄 -->
+    <div id="appendix" class="chapter">
+        <h2>附錄（索引）</h2>
+        
+        <ul>
+            <li><strong>附件一</strong>：宜蘭縣都市計畫委員會第211次會議紀錄（摘錄）</li>
+            <li><strong>附件二</strong>：內政部都市計畫委員會第992次會議紀錄（摘錄）</li>
+        </ul>
+
+        <h3>圖目錄（示意）</h3>
+        <ul>
+            <li>圖一　計畫範圍位置圖（略）</li>
+            <li>圖二　土地使用分區圖（略）</li>
+            <li>圖六　綠-1（土地使用現況照片圖）（略）</li>
+            <li>圖八　停-1（土地使用現況照片圖）（略）</li>
+        </ul>
+
+        <div class="warning-box">
+            <p><strong>註</strong>：本統整版未重製圖面；正式使用仍應以核定之計畫書、書圖與公告內容為準。</p>
+        </div>
+    </div>
+
+    <!-- 附註 -->
+    <div id="notes" class="chapter">
+        <h2>附註（校訂說明）</h2>
+        
+        <ol>
+            <li>本文件係依您提供之官方計畫書與審議紀錄 <strong>OCR 文字</strong>重編，為便於法律與技術審查之<strong>可讀版</strong>；原 OCR 中之明顯錯字與排版錯亂，已按專業用語與計畫上下文<strong>校正</strong>。對於無法百分百確定之細節，已以「概述／以正式圖說為準」方式註明。</li>
+            <li>數值與專有名詞（如：<strong>220.47公頃、36.12→36.051公頃、綠地0.08→0.03、停車場0.56→0.54、保護區131.819、農業區40.41、屋頂斜率≥25%、退縮10公尺（臨公設）、退縮5公尺（污水處理廠）</strong>等）均依重點條文與表格校對。</li>
+            <li>若需<strong>核對法定公告版本</strong>或<strong>出具對外正式本</strong>，建議以本文件為索引，逐條對照核定之「計畫書及書圖」，並由承辦單位或律師完成最終版本簽認。</li>
+        </ol>
+
+        <div class="highlight-box">
+            <p style="text-align: center; font-size: 1.2em; font-weight: bold; margin-top: 50px;">— 末 —</p>
+        </div>
+    </div>
 
     <script>
-        // 導航欄漢堡選單
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // 平滑滾動
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        // 自動生成頁碼
+        window.addEventListener('load', function() {
+            const chapters = document.querySelectorAll('.chapter');
+            chapters.forEach((chapter, index) => {
+                const pageNumber = document.createElement('div');
+                pageNumber.className = 'page-number';
+                pageNumber.textContent = `第 ${index + 1} 頁`;
+                chapter.appendChild(pageNumber);
             });
         });
 
-        // 回到頂部按鈕
-        const backToTop = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+        // 列印優化
+        window.addEventListener('beforeprint', function() {
+            document.body.style.fontSize = '11pt';
         });
 
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // 滾動動畫
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // 表格響應式處理
-        const tables = document.querySelectorAll('.data-table');
-        tables.forEach(table => {
-            const wrapper = document.createElement('div');
-            wrapper.style.overflowX = 'auto';
-            table.parentNode.insertBefore(wrapper, table);
-            wrapper.appendChild(table);
+        window.addEventListener('afterprint', function() {
+            document.body.style.fontSize = '12pt';
         });
     </script>
 </body>
